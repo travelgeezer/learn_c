@@ -1,6 +1,19 @@
+#include <math.h>
 #include <stdio.h>
 
 /* main: generate some simple output */
+
+int ceiling(int x, int n);
+
+
+int main(int argc, char *argv[])
+{
+  int result = ceiling(17, 4);
+
+  printf("%d\n", result);
+  return 0;
+}
+
 
 int ceiling(int x, int n) {
   double dx = x;
@@ -17,14 +30,4 @@ int ceiling(int x, int n) {
     {
       return resultInt;
     }
-}
-
-
-int main(void)
-{
-
-  int result = ceiling(16, 4);
-
-  printf("%d\n", result);
-  return 0;
 }
