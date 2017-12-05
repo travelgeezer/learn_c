@@ -4,6 +4,7 @@
 
 int ceiling(int x, int n);
 void increment(int x);
+void print_parity(int x);
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,8 @@ int main(int argc, char *argv[])
   printf("-6 %% 16 = %d\n", -6 % 16);
   printf("-6 %% -16 = %d\n", -6 % -16);
 
+  print_parity(17);
+  print_parity(18);
 
   return 0;
 }
@@ -41,4 +44,12 @@ int ceiling(int x, int n) {
 void increment(int x)
 {
   x = x + 1;
+}
+
+void print_parity(int x)
+{
+  if (x % 2 == 0)
+    printf("x is even.\n");
+  else
+    printf("x is odd.\n");
 }
