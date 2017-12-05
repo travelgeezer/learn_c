@@ -4,19 +4,21 @@
 
 int main(int argc, char *argv[])
 {
-  int x = 10;
-
-  if (x > 0 && x < 10);
+  int x = 0;
+  int y = 1;
+  if (x > 0)
+    printf("test ok\n");
+  else if (x <= 0 && y > 0)
+    printf("test ok \n");
   else
-    printf("x is out of range.\n");
+    printf("test failed\n");
 
   // change
 
-  if (x <= 0 || x >= 10)
-    {
-      printf("x is out of range.\n");
-    }
-
+  if (x <= 0 && y <= 0)
+    printf("test failed\n");
+  else
+    printf("test ok\n");
 
   return 0;
 }
