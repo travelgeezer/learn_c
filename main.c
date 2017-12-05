@@ -3,14 +3,16 @@
 /* main: generate some simple output */
 
 int is_even(int x);
+int is_leap_year(int year);
 
 int main(int argc, char *argv[])
 {
-  int i = 19;
-  if (is_even(i)) {
-    // do something.
+  int year = 2000;
+
+  if (is_leap_year(year)) {
+    printf("yes.\n");
   } else {
-    // do something.
+    printf("no.\n");
   }
 
   return 0;
@@ -19,4 +21,13 @@ int main(int argc, char *argv[])
 int is_even(int x)
 {
   return !(x % 2);
+}
+
+int is_leap_year(int year)
+{
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
