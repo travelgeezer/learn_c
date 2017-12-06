@@ -2,35 +2,26 @@
 #include <stdio.h>
 /* main: generate some simple output */
 
-double myround(double x);
+int gcd(int a, int b);
 
 int main(int argc, char *argv[])
 {
 
-  printf("%f\n", myround(4.49));
-  printf("%f\n", myround(4.50));
-  printf("%f\n", myround(-4.49));
-  printf("%f\n", myround(-4.50));
+  printf("%d\n", gcd(16, 4));
 
   return 0;
 }
 
+int gcd(int a, int b) {
+  double da = a;
+  double db = b;
 
-double myround(double x)
-{
-  int ix = x;
-  double decimal = fabs(x - ix);
-  if (x > 0) {
-    if (decimal < 0.50) {
-      return floor(x);
-    } else {
-      return ceil(x);
-    }
+  int iresult = a / b;
+  double dresult = da / db;
+
+  if (dresult - iresult == 0.00) {
+    return b;
   } else {
-    if (decimal < 0.50) {
-      return ceil(x);
-    } else {
-      return floor(x);
-    }
+    return gcd(b, a % b);
   }
 }
