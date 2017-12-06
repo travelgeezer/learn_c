@@ -1,8 +1,6 @@
 #include <stdio.h>
 /* main: generate some simple output */
 
-
-
 struct complex_struct {
   double x, y;
 };
@@ -12,7 +10,7 @@ void toString(struct complex_struct c);
 int main(int argc, char *argv[])
 {
 
- struct complex_struct z = { 1.0, 4.0};
+  struct complex_struct z = { 1.0, 4.0};
 
   toString(z);
 
