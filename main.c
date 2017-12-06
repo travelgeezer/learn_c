@@ -6,6 +6,7 @@ int gcd(int a, int b);
 int gcd_iteration(int a, int b);
 int is_gcd(int a, int b);
 int fab(int a);
+int fab_iteration(int n);
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +16,6 @@ int main(int argc, char *argv[])
 
   printf("gcd %d\n", gcd(16, 3));
   printf("gdc iteration %d\n", gcd_iteration(16, 3));
-
 
   return 0;
 }
@@ -66,4 +66,9 @@ int fab(int a)
 
   return fab(a - 1) + fab(a - 2);
 
+}
+
+int fab_iteration(int n)
+{
+  /* TODO: */
 }
