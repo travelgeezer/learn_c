@@ -1,24 +1,21 @@
 #include <stdio.h>
 /* main: generate some simple output */
 
-struct complex_struct {
-  double x, y;
-};
-
-void toString(struct complex_struct c);
-
 int main(int argc, char *argv[])
 {
+  int i;
+  char str[6] = "hello";
+  char reverse_str[6] = "";
 
-  struct complex_struct z = { 1.0, 4.0};
+  printf("%s\n", str);
+  for (i = 0; i < 5; i++) {
+    /* reverse_str[5-i] = str[i]; */
+    reverse_str[4-i] = str[i];
+    printf("str[i] : %c\n", str[i]);
+    printf("reverse_str[i] : %c\n", reverse_str[i]);
+    printf("reverse_str[5-%d] : %c\n", i ,reverse_str[5-i]);
+  }
 
-  toString(z);
-
+  printf("reverse_str : %s\n", reverse_str);
   return 0;
-}
-
-
-void toString(struct complex_struct c)
-{
-  printf("complex_struct: {x: %f, y: %f}\n", c.x, c.y);
 }
